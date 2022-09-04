@@ -17,16 +17,16 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
+#akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-akbarvpnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/trojango"
+#akbarvpnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/stunnel5"
+#akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/stunnel5"
 
 # initializing var
-export DEBIAN_FRONTEND=noninteractive
+#export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
@@ -242,28 +242,28 @@ rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
 # install stunnel 5 
-cd /root/
-wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
-unzip -o stunnel5.zip
-cd /root/stunnel
-chmod +x configure
-./configure
-make
-make install
-cd /root
-rm -r -f stunnel
-rm -f stunnel5.zip
-mkdir -p /etc/stunnel5
-chmod 644 /etc/stunnel5
+#cd /root/
+#wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
+#unzip -o stunnel5.zip
+#cd /root/stunnel
+#chmod +x configure
+#./configure
+#make
+#make install
+#cd /root
+##rm -r -f stunnel
+#rm -f stunnel5.zip
+#mkdir -p /etc/stunnel5
+#chmod 644 /etc/stunnel5
 
 # Download Config Stunnel5
-cat > /etc/stunnel5/stunnel5.conf <<-END
-cert = /etc/xray/xray.crt
-key = /etc/xray/xray.key
-client = no
-socket = a:SO_REUSEADDR=1
-socket = l:TCP_NODELAY=1
-socket = r:TCP_NODELAY=1
+#cat > /etc/stunnel5/stunnel5.conf <<-END
+#cert = /etc/xray/xray.crt
+#key = /etc/xray/xray.key
+#client = no
+#socket = a:SO_REUSEADDR=1
+#socket = l:TCP_NODELAY=1
+#socket = r:TCP_NODELAY=1
 
 [dropbear]
 accept = 445
@@ -287,45 +287,45 @@ END
 #cat key.pem cert.pem >> /etc/stunnel5/stunnel5.pem
 
 # Service Stunnel5 systemctl restart stunnel5
-cat > /etc/systemd/system/stunnel5.service << END
-[Unit]
-Description=Stunnel5 Service
-Documentation=https://stunnel.org
-Documentation=https://github.com/Akbar218
-After=syslog.target network-online.target
+#cat > /etc/systemd/system/stunnel5.service << END
+#[Unit]
+#Description=Stunnel5 Service
+#Documentation=https://stunnel.org
+#Documentation=https://github.com/Akbar218
+#After=syslog.target network-online.target
 
-[Service]
-ExecStart=/usr/local/bin/stunnel5 /etc/stunnel5/stunnel5.conf
-Type=forking
+#[Service]
+#ExecStart=/usr/local/bin/stunnel5 /etc/stunnel5/stunnel5.conf
+#Type=forking
 
-[Install]
-WantedBy=multi-user.target
-END
+#[Install]
+#WantedBy=multi-user.target
+#END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
+#wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
 
 # Ubah Izin Akses
-chmod 600 /etc/stunnel5/stunnel5.pem
-chmod +x /etc/init.d/stunnel5
-cp /usr/local/bin/stunnel /usr/local/bin/stunnel5
+#chmod 600 /etc/stunnel5/stunnel5.pem
+#chmod +x /etc/init.d/stunnel5
+#cp /usr/local/bin/stunnel /usr/local/bin/stunnel5
 
 # Remove File
-rm -r -f /usr/local/share/doc/stunnel/
-rm -r -f /usr/local/etc/stunnel/
-rm -f /usr/local/bin/stunnel
-rm -f /usr/local/bin/stunnel3
-rm -f /usr/local/bin/stunnel4
+#rm -r -f /usr/local/share/doc/stunnel/
+#rm -r -f /usr/local/etc/stunnel/
+#rm -f /usr/local/bin/stunnel
+#rm -f /usr/local/bin/stunnel3
+#rm -f /usr/local/bin/stunnel4
 #rm -f /usr/local/bin/stunnel5
 
 # Restart Stunnel 5
-systemctl stop stunnel5
-systemctl enable stunnel5
-systemctl start stunnel5
-systemctl restart stunnel5
-/etc/init.d/stunnel5 restart
-/etc/init.d/stunnel5 status
-/etc/init.d/stunnel5 restart
+#systemctl stop stunnel5
+#systemctl enable stunnel5
+#systemctl start stunnel5
+#systemctl restart stunnel5
+#/etc/init.d/stunnel5 restart
+#/etc/init.d/stunnel5 status
+#/etc/init.d/stunnel5 restart
 
 #OpenVPN
 wget https://${akbarvpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
@@ -546,7 +546,7 @@ chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/dropbear restart
 /etc/init.d/fail2ban restart
 /etc/init.d/sslh restart
-/etc/init.d/stunnel5 restart
+#/etc/init.d/stunnel5 restart
 /etc/init.d/vnstat restart
 /etc/init.d/fail2ban restart
 /etc/init.d/squid restart
