@@ -19,7 +19,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
+akbarvpn="raw.githubusercontent.com/Linkershark/ws/main/ssh"
 # Link Hosting Kalian Untuk Sstp
 #akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/sstp"
 # Link Hosting Kalian Untuk Ssr
@@ -33,11 +33,11 @@ akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
 # Link Hosting Kalian Untuk Ipsec
 #akbarvpnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/backup"
+akbarvpnnnnnnnn="raw.githubusercontent.com/Linkershark/ws/main/backup"
 # Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket"
+akbarvpnnnnnnnnn="raw.githubusercontent.com/Linkershark/ws/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ohp"
+akbarvpnnnnnnnnnn="raw.githubusercontent.com/Linkershark/ws/Mantap/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
