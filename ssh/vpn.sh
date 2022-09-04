@@ -28,7 +28,7 @@ fi
 akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ssh"
 
 # initialisasi var
-export DEBIAN_FRONTEND=noninteractive
+#export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
