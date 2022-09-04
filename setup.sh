@@ -21,17 +21,17 @@ LIGHT='\033[0;37m'
 # Link Hosting Kalian Untuk Ssh Vpn
 akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/sstp"
+#akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssr"
+#akbarvpnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks"
+#akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/wireguard"
+#akbarvpnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
+#akbarvpnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsec"
+#akbarvpnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsec"
 # Link Hosting Kalian Untuk Backup
 akbarvpnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/backup"
 # Link Hosting Kalian Untuk Websocket
@@ -54,33 +54,33 @@ mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 wget https://${akbarvpn}/slhost.sh && chmod +x slhost.sh && ./slhost.sh
 #install xray
-wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+#wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
 wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://${akbarvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+#wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+#wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://${akbarvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+#wget https://${akbarvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install L2TP
-wget https://${akbarvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget https://${akbarvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+#wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
 wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+#wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install SlowDNS
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns && chmod +x install-sldns && ./install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray sl-grpc
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
+#wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
 # install xray grpc
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
+#wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
 # install shadowsocks plugin
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
+#wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
  
 
 rm -f /root/ssh-vpn.sh
